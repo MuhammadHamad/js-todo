@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- You can define this class in your HTML file -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .delete-button {
+          @apply bg-red-500 text-white p-2 rounded cursor-pointer;
+        }
+        .edit-button {
+          @apply bg-blue-500 text-white p-2 rounded cursor-pointer;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="font-mono">
+    <h1 class="text-center text-zinc-400 text-4xl font-bold underline">
+      My Todos
+    </h1>
+    <form class="text-center my-10 h-10" id="form">
+      <input
+        type="text"
+        class="border-4 border-zinc-400 w-2/3 p-2 focus:outline-none focus:border-yellow-500"
+        id="input-text"
+      />
+      <input
+        class="border-4 border-zinc-400 p-2 focus:outline-none bg-zinc-400 disabled:bg-zinc-200 disabled:line-through"
+        type="submit"
+        value="Submit"
+        id="btn"
+      />
+    </form>
+
+    <div class="bg-zinc-400 text-zinc-700 text-3xl h-auto w-full " id="output">
+      <div class="" id="list"></div>
+    </div>
+  </body>
+
+  <script src="app.js"></script>
+</html>
